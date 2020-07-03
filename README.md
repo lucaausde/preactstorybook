@@ -41,7 +41,7 @@ import { h } from "preact";
 
 export default { title: "Button" };
 
-export const withText = () => <div>{process.env.TEST}Hello Button</div>;
+export const withText = () => <div>{process.env.TEST}</div>;
 
 ```
 
