@@ -1,5 +1,5 @@
 # preactstorybook
----
+
 > A template for Preact apps
 
 State of development: 🐣 [July, 3. 2020]
