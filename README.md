@@ -30,7 +30,7 @@ yarn build
 
 ## New to Preact?
 
-Check out their [guide](https://preactjs.com/guide/v10/).
+Check out their [guide](https://preactjs.com/guide/v10/getting-started).
 
 ## Don't know how to write stories?
 
