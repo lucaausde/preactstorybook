@@ -1,0 +1,15 @@
+/node_modules/
+/build/
+/public/assets/
+
+.DS_Store
+
+.vscode
+.idea
+
+.env
+
+*.lock
+*.log
+
+*.gitignore.*

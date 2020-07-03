@@ -1,0 +1,19 @@
+{
+  "name": "Preact Storybook",
+  "short_name": "preactstorybook",
+  "description": "A preact webpack storybook app",
+  "dir": "auto",
+  "lang": "en-NZ",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": ".",
+  "background_color": "#fff",
+  "theme_color": "#fff",
+  "icons": [
+    {
+      "src": "./favicon.ico",
+      "sizes": "64x64",
+      "type": "image/ico"
+    }
+  ]
+}
