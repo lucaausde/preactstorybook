@@ -1,5 +1,6 @@
 import { FunctionalComponent as FC, h } from "preact";
 import { styled, setPragma } from "goober";
+import { media } from "./constants/media/media";
 
 setPragma(h);
 
@@ -9,7 +10,9 @@ interface IText {
 
 const Text = styled<IText>("div")`
   font-size: 16px;
-  color: black;
+  ${media.greaterThan("small")} {
+    color: green;
+  }
 `;
 
 const App: FC = () => {
