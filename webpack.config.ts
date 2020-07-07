@@ -76,7 +76,7 @@ module.exports = (env, argv) => {
       ],
     },
     plugins: [
-      new CleanWebpackPlugin(),
+      // new CleanWebpackPlugin(),
       new HtmlPlugin({
         template: path.join(__dirname, "public/index.html"),
       }),
@@ -126,29 +126,32 @@ module.exports = (env, argv) => {
       }),
       new CompressionPlugin({ algorithm: "gzip" }),
     ],
-    optimization: {
-      minimize: true,
+    /*optimization: {
+      runtimeChunk: "single",
       splitChunks: {
+        chunks: "all",
+        maxInitialRequests: Infinity,
+        minSize: 0,
         cacheGroups: {
-          styles: {
-            name: "styles",
-            test: /\.css$/,
-            chunks: "all",
-            enforce: true,
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name(module) {
+              const packageName = module.context.match(
+                /[\\/]node_modules[\\/](.*?)([\\/]|$)/
+              )[1];
+              return `module.${packageName.replace("@", "")}`;
+            },
           },
         },
       },
-    },
+    },*/
     devServer: {
       headers: {
         "Access-Control-Allow-Origin": "*",
       },
       host: "0.0.0.0",
       port: 3000,
-      hot: false,
-      inline: true,
-      liveReload: true,
-      open: "Safari",
+      historyApiFallback: true,
       onListening: function(server) {
         const port = server.listeningApp.address().port;
         console.log("Listening on port:", port);

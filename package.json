@@ -6,7 +6,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --mode=development",
+    "dev": "webpack-dev-server --mode=development --hot --open=Safari --liveReload",
     "build": "cross-env NODE_ENV=production webpack --progress",
     "serve": "serve build",
     "storybook": "start-storybook -p 3333 -s public .env",
@@ -18,6 +18,7 @@
     "@storybook/addon-storysource": "^5.3.19",
     "@storybook/addon-viewport": "^5.3.19",
     "@storybook/preact": "^5.3.19",
+    "@types/node": "^14.0.18",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "compression-webpack-plugin": "^4.0.0",

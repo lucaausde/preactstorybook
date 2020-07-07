@@ -3,8 +3,13 @@ import { styled, setPragma } from "goober";
 
 setPragma(h);
 
-const Text = styled("div")`
+interface IText {
+  thingy?: boolean;
+}
+
+const Text = styled<IText>("div")`
   font-size: 16px;
+  color: black;
 `;
 
 const App: FC = () => {
