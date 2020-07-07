@@ -36,7 +36,7 @@ class mediaHelper {
       throw new Invalid(breakpoint);
     }
 
-    return `@media (min-width: ${this.sizes[breakpoint]}px)`;
+    return `@media (max-width: ${this.sizes[breakpoint]}px)`;
   }
 
   between(min, max) {
