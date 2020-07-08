@@ -2,8 +2,14 @@ import { h, render } from "preact";
 
 import "./constants/styles/globals.scss";
 import App from "./App";
+import ThemeProvider from "./constants/themes/ThemeProvider";
 
-render(<App />, document.getElementById("root"));
+render(
+  <ThemeProvider>
+    <App />
+  </ThemeProvider>,
+  document.getElementById("root")
+);
 
 // Update on upgrade
 

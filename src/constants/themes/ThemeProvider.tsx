@@ -1,33 +1,19 @@
-import {
-  FunctionalComponent as FC,
-  h,
-  ComponentChildren,
-  createContext,
-} from "preact";
-import { useState } from "preact/hooks";
-export let Theme = createContext("light");
+import { FunctionalComponent as FC, h, ComponentChildren } from "preact";
+import { Provider } from "unistore/preact";
+import theme from "./store";
+
+// https://codesandbox.io/s/l7y7w5qkz9?file=/index.js
+// https://github.com/developit/unistore
 
 interface IThemeProvider {
   children: ComponentChildren;
 }
 
 const ThemeProvider: FC<IThemeProvider> = ({ children }) => {
-  let [theme, setTheme] = useState("light");
   return (
-    <Theme.Provider value={theme}>
-      <button
-        onClick={() => {
-          if (theme == "light") {
-            setTheme("dark");
-          } else {
-            setTheme("light");
-          }
-        }}
-      >
-        Toggle Theme
-      </button>
-      {children}
-    </Theme.Provider>
+    <Provider store={theme}>
+      <div>{children}</div>
+    </Provider>
   );
 };
 
