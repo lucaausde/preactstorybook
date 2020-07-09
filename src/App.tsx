@@ -2,9 +2,8 @@ import { FunctionalComponent as FC, h } from "preact";
 import { styled, setPragma } from "goober";
 import { media } from "./constants/media/media";
 import { connect } from "unistore/preact";
-import store, { StoreState } from "./constants/themes/store";
-import light from "./constants/themes/light";
-import dark from "./constants/themes/dark";
+import store from "./constants/themes/helpers/store";
+import { lightTheme, darkTheme } from "./constants/themes/helpers/themes";
 
 setPragma(h);
 
@@ -24,16 +23,6 @@ const Text = styled<IText>("div")`
     color: ${(props) => props.theme.text};
   }
 `;
-
-const lightTheme: StoreState = {
-  themeName: "light",
-  theme: light,
-};
-
-const darkTheme: StoreState = {
-  themeName: "dark",
-  theme: dark,
-};
 
 const App: FC<IApp> = ({ themeName, theme }) => {
   return (

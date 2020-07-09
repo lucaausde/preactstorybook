@@ -2,7 +2,8 @@ import { h, render } from "preact";
 
 import "./constants/styles/globals.scss";
 import App from "./App";
-import ThemeProvider from "./constants/themes/ThemeProvider";
+import ThemeProvider from "./constants/themes/helpers/ThemeProvider";
+import "./constants/themes/helpers/cssThemeCheck";
 
 render(
   <ThemeProvider>

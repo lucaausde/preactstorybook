@@ -6,4 +6,19 @@ body {
 
 * {
   box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    content: "light";
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    content: "dark";
+  }
 }
