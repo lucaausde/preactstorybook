@@ -6,8 +6,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --mode=development --hot --open=Safari --liveReload",
-    "build": "cross-env NODE_ENV=production webpack --progress",
+    "dev": "webpack-dev-server --mode=development --hot --open=Safari --liveReload --config webpack.dev.ts",
+    "build": "cross-env NODE_ENV=production webpack --progress --config webpack.prod.ts",
     "serve": "serve build",
     "storybook": "start-storybook -p 3333 -s public .env",
     "build-storybook": "build-storybook -s public .env"
@@ -29,6 +29,7 @@
     "dotenv-webpack": "^1.8.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^6.0.0",
+    "hard-source-webpack-plugin": "^0.13.1",
     "html-webpack-plugin": "^4.3.0",
     "json-loader": "^0.5.7",
     "mini-css-extract-plugin": "^0.9.0",
@@ -46,7 +47,8 @@
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
-    "webpack-manifest-plugin": "^2.2.0"
+    "webpack-manifest-plugin": "^2.2.0",
+    "webpack-merge": "^5.0.9"
   },
   "dependencies": {
     "goober": "^1.8.0",

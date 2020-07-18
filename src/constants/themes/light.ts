@@ -1,5 +1,5 @@
 const light = {
-  text: "#414141",
+  text: "red",
 };
 
 export default light;

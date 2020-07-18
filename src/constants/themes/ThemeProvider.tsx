@@ -1,6 +1,6 @@
 import { FunctionalComponent as FC, h, ComponentChildren } from "preact";
 import { Provider } from "unistore/preact";
-import theme from "./store";
+import theme from "./helpers/store";
 
 interface IThemeProvider {
   children: ComponentChildren;
