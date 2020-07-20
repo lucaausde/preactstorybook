@@ -2,7 +2,7 @@
 
 > A template for Preact apps
 
-State of development: 🐣 [July, 3. 2020]
+State of development: 🐣 [July, 21. 2020]
 
 This is a project template for [Preact](https://preactjs.com) apps. To simplify the development workflow, this template supports [sass/scss](https://sass-lang.com) and [Storybook](https://storybook.js.org) - with some addons. Feel free to use, copy, modify, merge or publish this template.
 
