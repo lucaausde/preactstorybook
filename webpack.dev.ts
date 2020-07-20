@@ -16,6 +16,10 @@ module.exports = merge(require("./webpack.base"), {
     },
     host: "0.0.0.0",
     port: 3000,
+    hot: false,
+    inline: true,
+    liveReload: true,
+    open: "Safari",
     historyApiFallback: true,
     onListening: function(server) {
       const port = server.listeningApp.address().port;

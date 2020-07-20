@@ -7,7 +7,7 @@ module.exports = ({ config }) => {
     { test: /\.tsx?$/, exclude: /node_modules/, use: "ts-loader" },
     { test: /\.jsx?$/, exclude: /node_modules/, use: "babel-loader" },
     {
-      test: [[/\.css$/], [/\.s[ac]ss$/i]],
+      test: [[/\.css$/], [/\.sass$/], [/\.scss$/]],
       exclude: /node_modules/,
       use: [
         MiniCssExtractPlugin.loader,
@@ -38,6 +38,7 @@ module.exports = ({ config }) => {
       use: "raw-loader",
     }
   );
+  config.plugins.push(new MiniCssExtractPlugin());
 
   config.resolve.extensions.push(".ts", ".tsx");
 
