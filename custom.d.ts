@@ -1,14 +1,14 @@
 declare module "*.svg" {
-  const content: string;
-  export default content;
+  const value: any;
+  export default value;
 }
 
 declare module "*.jpg" {
-  const content: string;
-  export default content;
+  const value: any;
+  export default value;
 }
 
 declare module "*.png" {
-  const content: string;
-  export default content;
+  const value: any;
+  export default value;
 }
