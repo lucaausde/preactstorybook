@@ -1,20 +1,12 @@
 import { h, render } from "preact";
-
 import "./constants/styles/globals.scss";
+import "./constants/theme/cssThemeCheck";
 import App from "./App";
-import ThemeProvider from "./constants/themes/ThemeProvider";
-import "./constants/themes/helpers/cssThemeCheck";
 
-render(
-  <ThemeProvider>
-    <App />
-  </ThemeProvider>,
-  document.getElementById("root")
-);
-
-// Update on upgrade
+render(<App />, document.getElementById("root"));
 
 if (process.env.NODE_ENV === "production") {
+  // Update on upgrade
   const runtime = require("offline-plugin/runtime");
   runtime.install({
     onUpdateReady: () => {
@@ -24,11 +16,10 @@ if (process.env.NODE_ENV === "production") {
       window.location.reload();
     },
   });
+
+  // Redirect traffic to https
+  if (location.protocol === "http:" && localStorage.tried_ssl !== "true") {
+    localStorage.tried_ssl = "true";
+    location.href = "https" + location.href.substring(4);
+  }
 }
-
-// Redirect traffic to https
-
-// if (location.protocol === "http:" && localStorage.tried_ssl !== "true") {
-//   localStorage.tried_ssl = "true";
-//   location.href = "https" + location.href.substring(4);
-// }

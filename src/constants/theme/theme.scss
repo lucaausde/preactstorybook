@@ -1,0 +1,9 @@
+:root {
+  --color-text: #1c0e00;
+  --color-bg: #f1f1f1;
+}
+
+[data-theme="dark"] {
+  --color-text: #fefff5;
+  --color-bg: #0a0e13;
+}
