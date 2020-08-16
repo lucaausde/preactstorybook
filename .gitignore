@@ -13,3 +13,5 @@
 *.log
 
 *.gitignore.*
+
+stats.json
