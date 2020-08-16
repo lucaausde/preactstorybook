@@ -1,7 +1,10 @@
+@import "../theme/theme";
+
 body {
   margin: 0;
   border: 1px solid red;
   font-family: Helvetica, Arial, sans-serif;
+  background-color: var(--color-bg);
 }
 
 * {
@@ -9,16 +12,4 @@ body {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-}
-
-@media (prefers-color-scheme: light) {
-  html {
-    content: "light";
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    content: "dark";
-  }
 }
