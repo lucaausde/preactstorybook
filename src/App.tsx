@@ -2,8 +2,8 @@ import { FunctionalComponent as FC, h } from "preact";
 import { styled, setPragma } from "goober";
 import { media } from "./constants/media/media";
 
-// setTheme([string]) also avaliable!
-import { toggleTheme } from "./constants/theme/cssThemeCheck";
+// or set a theme with setTheme("yourtheme")
+import { toggleTheme } from "./constants/theme/helpers/cssThemeCheck";
 
 setPragma(h);
 
@@ -28,7 +28,7 @@ const App: FC<IApp> = () => {
           toggleTheme();
         }}
       >
-        Change Theme
+        Toggle Theme
       </button>
       <Text>{process.env.WELCOMEMESSAGE}</Text>
     </div>

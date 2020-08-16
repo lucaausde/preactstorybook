@@ -3,11 +3,11 @@ const LISTEN_LIGHT = "(prefers-color-scheme: light)";
 
 const root = document.querySelector("html");
 
-export function setTheme(type: string) {
+function setTheme(type: string) {
   root.setAttribute("data-theme", type);
 }
 
-export function toggleTheme() {
+function toggleTheme() {
   if (root.getAttribute("data-theme") == "dark") {
     root.setAttribute("data-theme", "light");
   } else {
@@ -35,3 +35,5 @@ function themeListener({ matches, media }) {
 
 window.matchMedia(LISTEN_DARK).addListener(themeListener);
 window.matchMedia(LISTEN_LIGHT).addListener(themeListener);
+
+export { setTheme, toggleTheme };

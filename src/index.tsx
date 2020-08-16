@@ -1,6 +1,6 @@
 import { h, render } from "preact";
 import "./constants/styles/globals.scss";
-import "./constants/theme/cssThemeCheck";
+import "./constants/theme/helpers/cssThemeCheck";
 import App from "./App";
 
 render(<App />, document.getElementById("root"));
