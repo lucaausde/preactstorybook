@@ -52,8 +52,7 @@
     "webpack-merge": "^5.0.9"
   },
   "dependencies": {
-    "goober": "^1.8.0",
-    "preact": "^10.4.4",
-    "unistore": "^3.5.2"
+    "goober": "^2.0.5",
+    "preact": "^10.4.4"
   }
 }

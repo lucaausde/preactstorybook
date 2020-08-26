@@ -1,11 +1,11 @@
 import { FunctionalComponent as FC, h } from "preact";
-import { styled, setPragma } from "goober";
+import { styled, setup } from "goober";
 import { media } from "./constants/media/media";
 
 // or set a theme with setTheme("yourtheme")
 import { toggleTheme } from "./constants/theme/helpers/cssThemeCheck";
 
-setPragma(h);
+setup(h);
 
 interface IText {
   theme?: any;
